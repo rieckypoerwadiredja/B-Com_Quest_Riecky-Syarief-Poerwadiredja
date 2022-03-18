@@ -1,0 +1,195 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-nav);
+    z-index: 2000;
+    transition: .3s;
+}
+
+/* ----------- logo ------------ */
+.navigation .logo {
+    color: var(--font-section-color);
+    font-weight: 600;
+    font-size: var(--font-size-logo);
+    height: 100%;
+    transition: .5s;
+}
+
+.navigation .logo i {
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-right: 5%;
+}
+
+/* ---------- menu -------------- */
+.navigation .menu {
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.navigation .menu .list {
+    height: 100%;
+}
+
+.navigation .menu .list a {
+    height: 100%;
+    padding: 0 var(--padding-list-nav);
+    color: var(--font-p-color);
+    transition: 0.3s;
+    font-size: var(--font-size-p);
+}
+
+.navigation .menu .list a:hover {
+    color: var(--font-section-color);
+    transition: 0.3s;
+
+}
+
+.navigation .menu .list a.active {
+    color: var(--font-section-color);
+}
+
+/* ------------- btn ---------------- */
+.contact {
+    font-size: var(--font-btn);
+    transition: .3s;
+    font-weight: 600;
+}
+
+/* ---------------- SCROLL EVENT ---------------- */
+/* ----------- bg nav ---------- */
+.navigation.bg-nav {
+    background: var(--font-section-color);
+    transition: .3s;
+}
+
+.navigation.bg-nav .logo,
+.navigation.bg-nav .menu .list a {
+    color: var(--section-color);
+}
+
+.navigation.bg-nav .contact {
+    color: var(--section-color) !important;
+    border-color: var(--section-color);
+    transition: .3s;
+}
+
+.navigation.bg-nav .menu .list a {
+    font-weight: 600;
+    color: var(--section-color-2);
+}
+
+.navigation.bg-nav .menu .list a.active {
+    color: var(--section-color);
+}
+
+.navigation.bg-nav .burger-icon {
+    color: var(--section-color);
+}
+
+.navigation.bg-nav .menu .list a:hover {
+    color: var(--section-color);
+}
+
+/* -------------------------------------- Mobile ------------------------ */
+
+/* ------------- burger icon ---------- */
+.burger-icon {
+    display: none;
+}
+
+/* ----------- mobile menu ------------ */
+.mob-menu {
+    display: none;
+}
+
+/*  ------------------------------------ Responsive --------------------- */
+
+@media (max-width: 768px) {
+    .navigation {
+        height: var(--height-nav);
+    }
+}
+
+@media (max-width:550px) {
+
+    .menu.deks,
+    .contact {
+        display: none !important;
+    }
+
+    .burger-icon {
+        display: block;
+        color: var(--font-section-color);
+        font-size: 20px;
+        transition: .5s;
+    }
+
+    .mob-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: .5s;
+        background-color: #fff;
+        display: flex !important;
+        width: 100%;
+        height: 100vh;
+        z-index: 1500;
+        padding-top: calc(var(--height-nav) - 30px);
+    }
+
+    .mob-menu.active {
+        transform: translateX(0%);
+        transition: .5s;
+    }
+
+    .mob-menu .menu {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mob-menu .menu .list {
+        width: 100%;
+        height: calc(100%/6);
+
+        /* starting animation */
+        transform: translateX(-10%);
+        opacity: 0;
+        transition: .5s;
+        /* background-color: antiquewhite; */
+    }
+
+    .mob-menu .menu a {
+        color: var(--section-color);
+        font-size: clamp(.8rem, 4vw, 1.1rem);
+
+    }
+
+    .mob-menu ion-icon {
+        color: var(--section-color);
+        font-size: clamp(1.1rem, 5vw, 1.5rem);
+        margin: 0 10px;
+        width: 10%;
+    }
+
+    /* ---------- navbar mobile ------------- */
+    .mob-menu .menu .list.active-nav {
+        /* ending animation */
+        transform: translateX(0%);
+        opacity: 1;
+        transition: .5s;
+    }
+
+    /* ------------- nav deks ----------------- */
+    .navigation .logo.active-nav {
+        color: var(--section-color);
+        transition: .5s;
+    }
+
+    .burger-icon.active-nav {
+        color: var(--section-color);
+        transition: .5s;
+    }
+}

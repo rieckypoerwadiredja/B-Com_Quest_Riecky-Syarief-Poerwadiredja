@@ -1,0 +1,205 @@
+.proses {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    padding-top: 6%;
+    /* background-color: red; */
+}
+
+/*  --------------------------------- title proses -------------------------- */
+.proses .title-proses {
+    width: 100%;
+    height: 20%;
+    /* background-color: aqua; */
+}
+
+.proses .title-proses h2 {
+    font-size: var(--font-section-subtitle);
+    color: var(--section-color);
+    width: 60%;
+}
+
+.proses .title-proses p {
+    font-size: var(--font-size-p2);
+    color: var(--font-p-color);
+    width: 40%;
+}
+
+/*  --------------------------------- caraosel proses ------------------------- */
+.proses .carausel-proses {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    margin-top: 2%;
+    /* background-color: yellow; */
+}
+
+.proses .carausel-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    /* background-color: green; */
+}
+
+.proses .carausel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------- card ------------ */
+
+.proses .carausel-container .card-proses {
+    position: relative;
+    min-width: calc(100% / 4 - 1%);
+    max-width: calc(100% / 4 - 1%);
+    margin: 0 .5%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+/* .proses .carausel-container .card-proses:first-child {
+    margin-left: 0;
+}
+
+.proses .carausel-container .card-proses:last-child {
+    margin-right: 0;
+} */
+
+.proses .carausel-container .card-proses img {
+    width: 100%;
+    height: 75%;
+    border-radius: 4px;
+    /* background-color: aqua; */
+}
+
+.proses .card-proses h3 {
+    font-size: var(--font-title-card);
+    color: var(--section-color);
+    width: 100%;
+    margin: 1.5% 0;
+    text-align: left;
+}
+
+.proses .card-proses p {
+    font-size: var(--font-size-p-card);
+    color: var(--font-p-color);
+    width: 100%;
+    text-align: left;
+}
+
+/*  -------------- btncarausel ------------- */
+
+.proses .carausel-proses ion-icon.btn-carausel {
+    position: absolute;
+    top: 35%;
+    font-size: var(--font-icon);
+    cursor: pointer;
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.proses ion-icon.btn-carausel.right-btn-caraosel {
+    right: 0;
+}
+
+.proses ion-icon.btn-carausel.left-btn-caraosel {
+    left: 0;
+}
+
+@media (max-width:900px) {
+    .proses {
+        height: 500px;
+    }
+}
+
+@media (max-width:768px) {
+    .proses {
+        padding-top: 4%;
+        height: 525px;
+    }
+
+    .proses .carausel-container {
+        margin-top: 4%;
+    }
+
+    .proses .carausel-container .card-proses {
+        min-width: calc(100% / 3 - 1%);
+        max-width: calc(100% / 3 - 1%);
+    }
+}
+
+@media (max-width:650px) {
+    .proses {
+        padding-top: 4%;
+        height: 450px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .proses {
+        padding-top: 4%;
+        height: 450px;
+    }
+
+    /*  ---- title proses --------- */
+    .proses .title-proses {
+        width: 100%;
+        height: 30%;
+        text-align: center;
+    }
+
+    .proses .title-proses h2,
+    .proses .title-proses p {
+        width: 100%;
+        height: 50%;
+        padding: 0 var(--padding-responsive-title-section2);
+    }
+
+    .proses .title-proses p {
+        height: 40%;
+    }
+
+    /*  ---- caraosel proses -------- */
+    .proses .carausel-proses {
+        height: 70%;
+        margin-top: 2%;
+    }
+}
+
+@media (max-width:550px) {
+    .proses {
+        padding-top: 4%;
+        height: 400px;
+    }
+
+    /*  ---- title proses --------- */
+    .proses .title-proses {
+        height: 25%;
+    }
+
+    /*  ---- caraosel proses -------- */
+    .proses .carausel-proses {
+        position: relative;
+        width: 100%;
+        height: 75%;
+    }
+}
+
+@media (max-width:550px) {
+    .proses {
+        height: 350px;
+    }
+}
+
+@media (max-width:425px) {
+    .proses {
+        height: 300px;
+    }
+}
+
+@media (max-width:320px) {
+    .proses {
+        height: 275px;
+    }
+}

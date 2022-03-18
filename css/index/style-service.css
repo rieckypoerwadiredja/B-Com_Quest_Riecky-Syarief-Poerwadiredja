@@ -1,0 +1,131 @@
+.service {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    padding-top: calc(var(--height-nav) * .5);
+    /* background-color: red; */
+}
+
+/* ------------------------ top service (title section) --------------*/
+.service .title-service {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* background-color: blue; */
+}
+
+.service h2 {
+    width: 55%;
+    height: 100%;
+    font-size: var(--font-section-subtitle);
+    /* background: firebrick; */
+}
+
+.service .title-service p {
+    width: 40%;
+    height: 100%;
+    font-size: var(--font-size-p2);
+    color: var(--font-p-color);
+    /* background: green; */
+}
+
+/*  ------------------------------- cards service -------------- */
+.service .services {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    /* background-color: yellow; */
+    gap: 5% 2%;
+}
+
+.service .card-service {
+    position: relative;
+    width: 48%;
+    height: 45%;
+    padding-right: 3%;
+    /* background-color: green; */
+}
+
+.service .card-service .icon-card {
+    width: fit-content;
+    aspect-ratio: 1/1;
+    height: 25%;
+    -webkit-box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
+    /* background-color: aliceblue; */
+}
+
+.service .card-service p {
+    font-size: var(--font-size-p2);
+    color: var(--font-p-color);
+    /* background-color: aqua; */
+}
+
+.service .card-service h3 {
+    font-size: var(--font-title-card);
+    /* background-color: gold; */
+}
+
+.service .card-service a {
+    font-size: var(--font-size-p2);
+    font-family: var(--font-family-openSans);
+    font-weight: 500;
+    color: #000;
+    /* background-color: gold; */
+}
+
+.service .card-service ion-icon {
+    font-size: 200%;
+}
+
+/* --------------------------------- responsive ---------------------------*/
+@media (max-width:768px) {
+    .service {
+        height: clamp(450px, 100vw, 700px);
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .service {
+        padding-top: calc(var(--height-nav) * .2);
+    }
+
+    /* height customize */
+    .service .title-service {
+        height: 25%;
+    }
+
+    .service .services {
+        position: relative;
+        width: 100%;
+        height: 75%;
+        /* background-color: yellow; */
+        gap: 5% 2%;
+    }
+
+    /* title customize */
+    .service h2 {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        padding: 0 var(--padding-responsive-title-section2);
+
+    }
+
+    .service .title-service p {
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        padding: 0 var(--padding-responsive-title-section2);
+
+    }
+
+    .service .card-service .icon-card {
+        height: clamp(15%, 5vw, 25%);
+    }
+
+
+}
