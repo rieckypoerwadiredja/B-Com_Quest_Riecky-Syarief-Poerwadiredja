@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^6.12.0",
+    "mongoose": "^6.2.7",
+    "nodemon": "^2.0.15"
+  },
+  "name": "company-profile-gojek",
+  "description": "DigitalAgent merupakan perusahaan yang memecahkan masalah dan menyajikan pengalaman digital yang berdampak bagi pengguna. Perusahaan juga membuat produk digital dengan tujuan memberikan yang terbaik kepada pengguna.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja/issues"
+  },
+  "homepage": "https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja#readme"
+}

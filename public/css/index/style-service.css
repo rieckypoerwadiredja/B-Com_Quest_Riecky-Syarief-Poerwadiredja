@@ -3,7 +3,6 @@
     width: 100%;
     height: 800px;
     padding-top: calc(var(--height-nav) * .5);
-    /* background-color: red; */
 }
 
 /* ------------------------ top service (title section) --------------*/
@@ -11,14 +10,12 @@
     position: relative;
     width: 100%;
     height: 20%;
-    /* background-color: blue; */
 }
 
 .service h2 {
     width: 55%;
     height: 100%;
     font-size: var(--font-section-subtitle);
-    /* background: firebrick; */
 }
 
 .service .title-service p {
@@ -26,7 +23,6 @@
     height: 100%;
     font-size: var(--font-size-p2);
     color: var(--font-p-color);
-    /* background: green; */
 }
 
 /*  ------------------------------- cards service -------------- */
@@ -34,7 +30,6 @@
     position: relative;
     width: 100%;
     height: 80%;
-    /* background-color: yellow; */
     gap: 5% 2%;
 }
 
@@ -43,7 +38,6 @@
     width: 48%;
     height: 45%;
     padding-right: 3%;
-    /* background-color: green; */
 }
 
 .service .card-service .icon-card {
@@ -53,18 +47,15 @@
     -webkit-box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 2px 17px -5px rgba(0, 0, 0, 0.25);
-    /* background-color: aliceblue; */
 }
 
 .service .card-service p {
     font-size: var(--font-size-p2);
     color: var(--font-p-color);
-    /* background-color: aqua; */
 }
 
 .service .card-service h3 {
     font-size: var(--font-title-card);
-    /* background-color: gold; */
 }
 
 .service .card-service a {
@@ -72,7 +63,6 @@
     font-family: var(--font-family-openSans);
     font-weight: 500;
     color: #000;
-    /* background-color: gold; */
 }
 
 .service .card-service ion-icon {
@@ -102,7 +92,6 @@
         position: relative;
         width: 100%;
         height: 75%;
-        /* background-color: yellow; */
         gap: 5% 2%;
     }
 

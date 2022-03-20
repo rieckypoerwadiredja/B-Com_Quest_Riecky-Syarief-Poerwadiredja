@@ -5,6 +5,7 @@
     --section-color: #001c34;
     --section-color-2: #5b7e9e;
     --btn-color: #ef4d1d;
+    --btn-color-hvr: #A64883;
     --font-section-color: #e0edf5;
     --font-p-color: #818b94;
 
@@ -176,7 +177,26 @@ a {
     background-color: transparent;
     color: var(--font-section-color);
     cursor: pointer;
+    transition: .3s;
 }
+
+.btn:hover {
+    background-color: var(--btn-color-hvr) !important;
+    transition: .3s;
+}
+
+.navigation .btn.contact:hover {
+    background-color: var(--btn-color) !important;
+    border-color: var(--btn-color);
+    transition: .3s;
+}
+
+.btn-container .btn.demo:hover {
+    background-color: transparent !important;
+    color: #fff;
+    transition: .3s;
+}
+
 
 .btn.btn-footer {
     border: none;

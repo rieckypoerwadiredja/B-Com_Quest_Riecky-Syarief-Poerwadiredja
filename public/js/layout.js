@@ -30,3 +30,24 @@ function changeBgNavigation() {
 };
 
 window.addEventListener("scroll", changeBgNavigation);
+
+//  ----------------------------- Form Layout -----------------------------
+const btnFooterForm = document.querySelector('.footer .btn-footer');
+const formFooter = document.querySelector('.form-all-container');
+
+btnFooterForm.addEventListener('click', () => {
+    formFooter.classList.add('active');
+
+    setTimeout(() => {
+        formFooter.style.background = 'rgba(0,0,0,0.3)';
+    }, 200);
+});
+
+const btnCloseFooterForm = document.querySelector('.close-form');
+
+btnCloseFooterForm.addEventListener('click', () => {
+    formFooter.style.background = 'rgba(0,0,0,0)';
+    setTimeout(() => {
+        formFooter.classList.remove('active');
+    }, 50);
+});

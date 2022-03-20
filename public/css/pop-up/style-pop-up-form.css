@@ -1,0 +1,139 @@
+.form-all-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transform: scale(0);
+    opacity: 0;
+    color: var(--font-p-color);
+    transition: .3s;
+}
+
+
+
+.form-all-container.active {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    transition: .3s;
+}
+
+
+/* container */
+.form-container {
+    max-width: 512px;
+    width: clamp(300px, 45vw, 512px);
+    height: 300px;
+    background-color: var(--section-color);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    /* background-color: aliceblue; */
+}
+
+.title-form h3 {
+    font-size: var(--font-title-card);
+    font-weight: 500;
+    color: var(--font-section-color);
+}
+
+.title-form ion-icon {
+    color: var(--font-section-color);
+    font-size: var(--font-section-title);
+    cursor: pointer;
+}
+
+.title-form p.description {
+    font-size: var(--font-size-a);
+    font-weight: 500;
+}
+
+.form input {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid var(--font-section-color);
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    border: 1px solid rgb(167, 164, 164);
+    border-radius: 10px;
+    outline: none;
+    transform: .3s;
+    font-size: var(--font-size-a);
+    color: var(--font-section-color);
+}
+
+.form input:hover {
+    border: 1px solid var(--font-section-color);
+    transform: .3s;
+}
+
+.form input:focus {
+    border: 1px solid var(--font-section-color);
+    border-radius: 7px;
+    transform: .3s;
+}
+
+.form label {
+    position: absolute;
+    left: 5%;
+    z-index: 11;
+    background-color: var(--section-color);
+    font-size: var(--font-size-a);
+    padding: 0 1%;
+    color: var(--font-section-color);
+}
+
+.form label:nth-child(1) {
+    top: -7%;
+}
+
+.form label:nth-child(3) {
+    top: 57%;
+}
+
+.subscribe-submit {
+    background-color: var(--btn-color);
+    color: var(--font-section-color);
+    font-size: var(--font-btn);
+    font-weight: 500;
+    border: none;
+    height: 13%;
+}
+
+@media (max-width:550px) {
+
+    /* title form */
+    .form {
+        height: 50%;
+    }
+
+    .title-form h3 {
+        font-size: clamp(.5rem, 3.5vw, .8rem);
+    }
+
+    .title-form .title p {
+        font-size: clamp(.4rem, 3.5vw, .6rem);
+    }
+
+    .title-form ion-icon {
+        font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    }
+
+    /* form input */
+    .form input {
+        font-size: clamp(.6rem, 1.5vw, .7rem);
+    }
+
+    .form label {
+        font-size: clamp(.6rem, 1.5vw, .7rem);
+    }
+}

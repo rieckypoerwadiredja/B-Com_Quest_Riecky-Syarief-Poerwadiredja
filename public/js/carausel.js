@@ -20,7 +20,6 @@ let realCardWidth = cardWidth + (parseInt(cardMarginLeft) + parseInt(cardMarginR
 
 // click left button carausel
 leftBtnCarausel.addEventListener('click', () => {
-    console.log("active")
     carauselContainer.scrollBy({
         left: -realCardWidth, // scroll to left ...
         behavior: 'smooth'
@@ -29,7 +28,6 @@ leftBtnCarausel.addEventListener('click', () => {
 
 // click right button carausel
 rightBtnCarausel.addEventListener('click', () => {
-    console.log("active")
     carauselContainer.scrollBy({
         left: realCardWidth, // scroll to right ...
         behavior: 'smooth'
