@@ -15,6 +15,11 @@
     /* background-color: aliceblue; */
 }
 
+.footer .top-footer i {
+    margin-bottom: 2%;
+
+}
+
 .footer .top-footer h1 {
     font-size: var(--font-section-subtitle);
     font-weight: 600;
@@ -57,7 +62,7 @@
 .logo-footer i {
     font-size: calc(clamp(1rem, 3vw, 2rem)*.65);
     margin-right: 2%;
-    margin-bottom: 2%;
+
 }
 
 /* ----------- copyright -----------  */

@@ -3,7 +3,6 @@
     width: 100%;
     height: 750px;
     color: var(--font-section-color);
-    /* background-color: red; */
 }
 
 .top-hero-section {
@@ -20,7 +19,6 @@
     height: 40%;
     padding-right: 3%;
     font-size: var(--font-section-title);
-    /* background-color: aqua; */
 }
 
 .hero-text {
@@ -28,7 +26,6 @@
     height: 40%;
     font-size: var(--font-size-p2);
     color: var(--font-p-color);
-    /* background-color: brown; */
 }
 
 /* ------- btn ----------- */
@@ -40,6 +37,7 @@
     font-size: var(--font-btn);
     font-weight: 500;
     display: flex;
+    transition: .3s;
 }
 
 .btn-container .request {
@@ -51,6 +49,8 @@
     box-shadow: -1px 2px 27px -7px var(--btn-color);
 
 }
+
+
 
 .btn-container .demo {
     border: none;

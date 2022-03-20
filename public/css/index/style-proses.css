@@ -3,14 +3,12 @@
     width: 100%;
     height: 600px;
     padding-top: 6%;
-    /* background-color: red; */
 }
 
 /*  --------------------------------- title proses -------------------------- */
 .proses .title-proses {
     width: 100%;
     height: 20%;
-    /* background-color: aqua; */
 }
 
 .proses .title-proses h2 {
@@ -31,14 +29,12 @@
     width: 100%;
     height: 80%;
     margin-top: 2%;
-    /* background-color: yellow; */
 }
 
 .proses .carausel-container {
     width: 100%;
     height: 100%;
     overflow-x: scroll;
-    /* background-color: green; */
 }
 
 .proses .carausel-container::-webkit-scrollbar {
@@ -53,16 +49,8 @@
     max-width: calc(100% / 4 - 1%);
     margin: 0 .5%;
     height: 100%;
-    /* background-color: blue; */
 }
 
-/* .proses .carausel-container .card-proses:first-child {
-    margin-left: 0;
-}
-
-.proses .carausel-container .card-proses:last-child {
-    margin-right: 0;
-} */
 
 .proses .carausel-container .card-proses img {
     width: 100%;
