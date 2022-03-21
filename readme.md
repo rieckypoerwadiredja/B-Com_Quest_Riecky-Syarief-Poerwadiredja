@@ -36,7 +36,13 @@ https://www.mongodb.com/
 ```
 <br>
 
-* Buka cmd (for Windows)
+* Buka cmd dan aktifkan mongodb(for Windows)
+
+```
+mongo
+```
+
+* Buat database baru dengan nama *company-contact-data* (for Windows)
 
 ```
 db.createCollection('company-contact-data')
