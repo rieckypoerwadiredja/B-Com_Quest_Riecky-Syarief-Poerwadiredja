@@ -14,18 +14,21 @@ Projek ini adalah website yang dibuat untuk pemenuhan tugas Pelatihan Bahasa Pem
 * CSS
 * JavaScript
 * Node JS
-* Express
 * MongoDB
 <br>
 
+* [Express](https://www.npmjs.com/package/express)
 * [EJS](https://www.npmjs.com/package/ejs)
 * [express-ejs-layouts](https://www.npmjs.com/package/express-ejs-layouts)
 * [Nodemon](https://www.npmjs.com/package/nodemon)
+* [Mongoose (version : 5.12.13)](https://www.npmjs.com/package/mongoose)
 
-
+<br>
 
 ### Rencana Projek
+
 Setelah program pelatihan selesai, projek akan dikembangkan kembali dengan fitur yang lebih lengkap. Kemudian untuk melengkapi hasil pelatihan projek ini akan menggunakan Golang sebagai pengganti NodeJS
+<br>
 
 ### Executing program 
 
@@ -34,7 +37,7 @@ Setelah program pelatihan selesai, projek akan dikembangkan kembali dengan fitur
 ```
 https://www.mongodb.com/
 ```
-<br>
+
 
 * Buka cmd dan aktifkan mongodb(for Windows)
 
@@ -47,8 +50,6 @@ mongo
 ```
 db.createCollection('company-contact-data')
 ```
-
-<br>
 
 * jalankan program dan pastikan semua package sudah terinstall
 
