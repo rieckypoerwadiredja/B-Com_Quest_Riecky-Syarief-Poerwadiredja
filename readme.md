@@ -4,7 +4,7 @@ DigitalAgent merupakan perusahaan yang memecahkan masalah dan menyajikan pengala
 
 ## Description
 
-Projek ini website ini dibuat untuk pemenuhan tugas .....
+Projek ini adalah website yang dibuat untuk pemenuhan tugas Pelatihan Bahasa Pemogramam Golang BNCC Community yang diselengarakan bersama Gojek
 
 ## Tentang Projek
 
@@ -13,22 +13,44 @@ Projek ini website ini dibuat untuk pemenuhan tugas .....
 * HTML
 * CSS
 * JavaScript
+* Node JS
+* Express
+* MongoDB
+<br>
+
+* [EJS](https://www.npmjs.com/package/ejs)
+* [express-ejs-layouts](https://www.npmjs.com/package/express-ejs-layouts)
+* [Nodemon](https://www.npmjs.com/package/nodemon)
+
 
 
 ### Rencana Projek
+Setelah program pelatihan selesai, projek akan dikembangkan kembali dengan fitur yang lebih lengkap. Kemudian untuk melengkapi hasil pelatihan projek ini akan menggunakan Golang sebagai pengganti NodeJS
 
+### Executing program 
 
+* Install MongoDB
 
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
+https://www.mongodb.com/
+```
+<br>
+
+* Buka cmd (for Windows)
+
+```
+db.createCollection('company-contact-data')
+```
+
+<br>
+
+* jalankan program dan pastikan semua package sudah terinstall
+
+```
+npm start
 ```
 
 
 ## License
 
-This project is licensed under the [MIT] License - see the LICENSE.md file for details
+Proyek ini dilisensikan di bawah Lisensi [MIT] - lihat file LICENSE.txt untuk detailnya
