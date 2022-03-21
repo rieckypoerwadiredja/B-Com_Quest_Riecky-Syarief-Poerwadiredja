@@ -2,20 +2,24 @@
     <div class="form-container flex-left-between-row">
         <div class="title-form flex-between-center">
             <div class="title">
-                <h3 class="form-title">Subscribe Form</h3>
-                <p class="description">Fill in required customs info</p>
+                <h3 class="form-title"><%- formSubscribeLayouts.title %></h3>
+                <p class="description"><%- formSubscribeLayouts.desc %></p>
             </div>
             <ion-icon class="close-form" name="close-circle-outline"></ion-icon>
 
         </div>
-        <form method="post" action="/" class="form flex-left-between-row" id="subscribe">
-            <label for="name">Company Name</label>
-            <input type="text" name="name" id="name" required placeholder="PT.Example">
-            <label for="email">Company Email</label>
-            <input type="email" name="email" id="email" required placeholder="example@gmail.com">
+        <form method="<%= formSubscribeLayouts.method %>" action="<%= formSubscribeLayouts.action %>"
+            class="form flex-left-between-row" id="subscribe">
+
+            <!-- Question -->
+            <% formSubscribeLayouts.questions.forEach(question => { %>
+            <label for="<%= question.idClassName %> "><%= question.label %></label>
+            <input type="<%= question.type %>" name="<%= question.idClassName %>" id="<%= question.idClassName %>"
+                required placeholder="<%= question.placeholder %>">
+            <% }) %>
+            <button type="submit" class="btn subscribe-submit">Submit</button>
 
         </form>
-        <button type="submit" class="btn subscribe-submit"> Submit</button>
 
     </div>
 

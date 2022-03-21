@@ -11,31 +11,28 @@
     transition: .3s;
 }
 
-
-
 .form-all-container.active {
     opacity: 1 !important;
     transform: scale(1) !important;
     transition: .3s;
 }
 
-
 /* container */
 .form-container {
     max-width: 512px;
     width: clamp(300px, 45vw, 512px);
-    height: 300px;
+    height: 250px;
     background-color: var(--section-color);
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 1rem;
+
 }
 
 .form {
     position: relative;
     width: 100%;
-    height: 50%;
-    /* background-color: aliceblue; */
+    height: 70%;
 }
 
 .title-form h3 {
@@ -93,11 +90,11 @@
 }
 
 .form label:nth-child(1) {
-    top: -7%;
+    top: -5%;
 }
 
 .form label:nth-child(3) {
-    top: 57%;
+    top: 32%;
 }
 
 .subscribe-submit {
@@ -106,14 +103,14 @@
     font-size: var(--font-btn);
     font-weight: 500;
     border: none;
-    height: 13%;
+    height: 22%;
 }
 
 @media (max-width:550px) {
 
     /* title form */
     .form {
-        height: 50%;
+        height: 70%;
     }
 
     .title-form h3 {
