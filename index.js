@@ -66,7 +66,7 @@ app.post('/', async (req, res) => {
 })
 
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 app.listen(port, () => {
     console.log(`Example app listening on port 3000! http://localhost:${port}`);
 });
