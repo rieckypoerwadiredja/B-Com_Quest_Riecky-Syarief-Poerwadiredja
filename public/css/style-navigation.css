@@ -192,4 +192,13 @@
         color: var(--section-color);
         transition: .5s;
     }
+
+    .mob-menu .menu .list a.active {
+        color: var(--section-color);
+    }
+
+    .mob-menu .menu .list a:hover {
+        color: var(--section-color);
+    }
+
 }

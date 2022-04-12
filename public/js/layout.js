@@ -4,7 +4,9 @@ const navigation = document.querySelector('.navigation');
 // ------------------------ NAVIGATION MOBILE ----------------------------
 const burgerIcon = document.querySelector('.burger-icon');
 
-burgerIcon.addEventListener('click', () => {
+burgerIcon.addEventListener('click', animationNav);
+
+function animationNav() {
     document.querySelector('.mob-menu').classList.toggle('active');
     document.querySelector('.navigation .logo').classList.toggle('active-nav');
     burgerIcon.classList.toggle('active-nav');
@@ -17,7 +19,7 @@ burgerIcon.addEventListener('click', () => {
         }, (idx * 200) + 100);
 
     });
-});
+}
 
 // scroll changed background navigation
 function changeBgNavigation() {
@@ -50,4 +52,52 @@ btnCloseFooterForm.addEventListener('click', () => {
     setTimeout(() => {
         formFooter.classList.remove('active');
     }, 50);
+});
+
+
+const list_a = document.querySelectorAll('.list-a');
+
+list_a.forEach((items, idx) => {
+    items.addEventListener("click", (e) => {
+        if (e.target.classList.contains('active')) {
+            e.target.classList.remove('active');
+            console.log("ASDASDASD")
+        } else {
+            list_a.forEach((item) => {
+                item.classList.remove('active');
+
+
+                e.target.classList.add('active');
+                let section = e.target.innerHTML.toLowerCase();
+                if (e.target.classList.contains('mob')) {
+                    document.querySelector('.mob-menu').classList.remove('active');
+                    document.querySelector('.navigation .logo').classList.remove('active-nav');
+                    burgerIcon.classList.remove('active-nav');
+
+                    // animation for list items
+                    const listItems = document.querySelectorAll('.mob-menu .menu .list');
+                    listItems.forEach((item, idx) => {
+                        setTimeout(() => {
+                            item.classList.remove('active-nav');
+                        }, (idx * 200) + 100);
+
+                    });
+                    section = e.target.children[1].innerHTML.toLowerCase();
+                }
+
+                // get id of clicked item
+                // to find the section to scroll
+
+                let element = document.getElementById(section);
+
+                // scroll to the section
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                });
+
+            });
+
+
+        }
+    });
 });
