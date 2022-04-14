@@ -25,12 +25,14 @@ Projek ini adalah website yang dibuat untuk pemenuhan tugas Pelatihan Bahasa Pem
 
 <br>
 
+
 ### Rencana Projek
 
 Setelah program pelatihan selesai, projek akan dikembangkan kembali dengan fitur yang lebih lengkap. Kemudian untuk melengkapi hasil pelatihan projek ini akan menggunakan Golang sebagai pengganti NodeJS
 <br>
+<br>
 
-### Executing program 
+## Executing program (local)
 
 * Install MongoDB
 
@@ -48,16 +50,77 @@ mongo
 * Buat database baru dengan nama *company-contact-data* (for Windows)
 
 ```
-db.createCollection('company-contact-data')
+use company-contact-data
 ```
+
+* Pastikan database sudah berhasil dibuat
+```
+show dbs
+```
+
+* Buat collection data dalam database
+```
+db.createCollection("subscribes")
+```
+
+* Pastikan collection sudah berhasil dibuat
+```
+show collections
+```
+
 
 * jalankan program dan pastikan semua package sudah terinstall
 
 ```
 npm start
 ```
+<br>
+<br>
 
+## Pengaturan jika ingin mengganti nama database
+* Pengaturan nama database
+
+```
+mongoose.connect('mongodb://127.0.0.1:27017/NAMA_BARU_DATABASE', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+});
+```
+
+[<img align="left" src="https://api.bellshade.org/badge/navigation?badgeType=next&text=DATABASE" />](./utils/db.js)
+
+<br>
+<br>
+<br>
+
+* Pengaturan nama collection
+
+```
+const mongoose = require('mongoose');
+
+// model for subscribe
+const Subscribe = mongoose.model('NAMA_BARU_COLECTION', {
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    }
+});
+
+module.exports = Subscribe;
+```
+
+[<img align="left" src="https://api.bellshade.org/badge/navigation?badgeType=next&text=COLLECTION" />](./model/subscribe.js)
+
+
+<br>
+<br>
+<br>
 
 ## License
 
-Proyek ini dilisensikan di bawah Lisensi [MIT] - lihat file LICENSE.txt untuk detailnya
+Proyek ini dilisensikan di bawah Lisensi [MIT](./LICENSE.txt) - lihat file LICENSE.txt untuk detailnya
