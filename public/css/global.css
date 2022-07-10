@@ -8,19 +8,20 @@
     --btn-color-hvr: #A64883;
     --font-section-color: #e0edf5;
     --font-p-color: #818b94;
+    --star-color:#e8bf0d;
 
     /* ------ font-size -------- */
-    --font-size-p: clamp(.59rem, 1.5vw, .8rem);
+    --font-size-p: clamp(.5rem, 1.5vw, .8rem);
     --font-size-p2: clamp(.4rem, 1.5vw, .8rem);
-    --font-size-a: clamp(.3rem, 1.5vw, .7rem);
-    --font-size-p-card: clamp(.3rem, 1.5vw, .6rem);
+    --font-size-a: clamp(.4rem, 1.5vw, .7rem);
+    --font-size-p-card: clamp(.4rem, 1.5vw, .6rem);
     --font-size-logo: clamp(.8rem, 1.8vw, 1.1rem);
     --font-btn: clamp(.5rem, 1vw, .9rem);
     --font-section-title: clamp(.8rem, 3.5vw, 2rem);
     --font-section-subtitle: clamp(.6rem, 3vw, 1.7rem);
     --font-title-card: clamp(.4rem, 2.5vw, 1rem);
     --font-icon: clamp(1.5rem, 3.5vw, 3rem);
-
+    --font-sub-title:clamp(.5rem, 1.5vw, .9rem);
     /* ------ padding -------*/
     --padding-list-nav: clamp(5px, 1vw, 10px);
     --padding-responsive-title-section1: 8%;
@@ -35,6 +36,9 @@
     /* ------ font ---------- */
     --font-family-poppins: 'Poppins', sans-serif;
     --font-family-openSans: 'Open Sans', sans-serif;
+
+    /* ------ transition -------- */
+    transition-norm: all 0.5s cubic-bezier(0.26, 0.56, 0.56, 0.8) 0s !important;
 }
 
 * {
@@ -47,6 +51,10 @@
 
 a {
     text-decoration: none;
+}
+
+body {
+    background-color:#fdfdfd;
 }
 
 /* -------- flex-box ------------ */
@@ -143,6 +151,13 @@ a {
     flex-direction: column;
 }
 
+.flex-left-evenly-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    flex-direction: column;
+}
+
 .flex-center-between-row {
     display: flex;
     justify-content: space-between;
@@ -164,6 +179,12 @@ a {
     flex-direction: column-reverse;
 }
 
+/* ----------- font ------------- */
+.sub-title{
+    width: 100%;
+    font-size:var(--font-sub-title);
+    color:var(--font-section-color-2);
+}
 
 
 
@@ -208,10 +229,28 @@ a {
     -moz-box-shadow: -1px 2px 27px -7px var(--btn-color);
     box-shadow: -1px 2px 27px -7px var(--btn-color);
 }
-
+/* padding */
 .padding {
     padding: 0px 6%;
 }
+
+.padding-content {
+    padding: 3% 4%;
+}
+/* margin */
+.margin-tb-sm{
+    margin: 1.5% .5%;
+}
+
+.margin-tb-md{
+    margin: 2% .0;
+}
+
+.margin-tb-lg{
+    margin: 5% .0;
+}
+
+
 
 li {
     list-style: none;
@@ -221,6 +260,59 @@ li {
 a {
     text-decoration: none;
 }
+.read{
+    width:100%;
+    font-weight:500;
+    font-size:var(--font-size-p);
+    color:var(--color-primary);
+    text-decoration:underline;
+    cursor:pointer;
+    text-align:left !important;
+    margin:3% 0;
+}
+
+/* ---------- badge --------------  */
+.badge{
+    display: flex;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--section-color);
+    font-size: var(--font-btn);
+    font-weight: 500;
+    margin-left: 0.3rem;
+    transition:.3s;
+    width:fit-content;
+}
+.badge ion-icon{
+    color:var(--btn-color);
+    transition:.3s;
+    font-size:calc(var(--font-icon)*.2);
+}
+
+.badge:hover{
+    background-color: var(--btn-color);
+    transition:.3s;
+}
+.badge:hover ion-icon{
+    color:#fff;
+    transition:.3s;
+}
+
+.badge-title{
+    display: inline-block;
+    width:auto !important;
+    padding: 1% 2%;
+    border-radius: 3px;
+    background-color: #fff;
+    color: var(--font-section-color);
+    font-size:calc(var(--font-title-card) * .8) !important;
+    font-weight: 700;
+    -webkit-box-shadow: -2px 7px 10px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 7px 9px -7px rgba(0,0,0,0.75);
+    box-shadow: -2px 7px 10px -7px rgba(0,0,0,0.75);
+}
+
 
 
 

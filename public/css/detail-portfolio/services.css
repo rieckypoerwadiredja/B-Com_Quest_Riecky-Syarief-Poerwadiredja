@@ -1,0 +1,170 @@
+
+.service-container {
+    position: relative;
+    width:100%;
+    height:380px;
+    padding:1% 0;
+    /* background-color:red; */
+}
+
+.service-container .service{
+    width:30%;
+    height:100%;
+    /* background-color:blue; */
+}
+/* --------------------- explanation -------------------*/
+.explanation{
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:3% 1%;
+    width:calc(100% / 3);
+    height:auto;
+}
+
+.card-explanation{
+    width:100%;
+    height:auto;
+    background-color:#fff;
+    border-radius:8px;
+    -webkit-box-shadow: -2px 5px 9px 3px rgba(0,0,0,0.18);
+    -moz-box-shadow: -2px 5px 9px 3px rgba(0,0,0,0.18);
+    box-shadow: -2px 5px 9px 3px rgba(0,0,0,0.18);
+}
+
+.card-explanation .title-card{
+    font-weight:500;
+    font-size:var(--font-title-card);
+    color:var(--section-color);
+}
+
+.card-explanation ion-icon{
+    font-size:calc(var(--font-icon)*.4);
+    color:var(--star-color);
+}
+
+.card-explanation .font-icon{
+    font-size:calc(var(--font-size-p)*.8);
+}
+
+.card-explanation p{
+    font-weight:400;
+    font-size:var(--font-size-p2);
+}
+
+
+/* ----------- desc-con ----------- */
+.desc-con{
+    width:100%;
+    height:35%;
+    margin:5% 0;
+    /* background-color:yellow; */
+}
+
+.desc-card{
+    position:relative;
+    width:100%;
+    height:35%;
+    max-height:35% !important;
+    transition: max-height 0.3s ease-in;
+}
+.desc-card.less{
+    max-height:50px !important;
+    overflow:hidden;
+    transition: max-height 0.3s ease-in;
+    /* background-color:yellow; */
+}
+
+/* .desc-card.less::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:50%;
+    background:linear-gradient(to bottom, rgba(255,255,255,.5) 30%,rgba(255,255,255,.5) 70%, rgba(255,255,255,1) 100%);
+    opacity:.5;
+    z-index:1;
+} */
+
+.desc-con.active{
+    height:auto;
+}
+
+/* desc-sub-con */
+.desc-sub-con{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    /* background-color:red; */
+}
+
+/* btn-custom */
+.service-container .btn{
+    background-color:var(--section-color);
+    width:100%;
+    height:10%;
+    text-align:center;
+    font-size:calc(var(--font-title-card)*.8);
+}
+
+.service-container .btn:hover{
+    background-color:var(--btn-color) !important;
+    height:10%;
+}
+
+/* ------------ custom slider / carousel --------------- */
+.proses {
+    /* background-color:green; */
+    margin-left:calc(100%/3);
+    padding:0 1%;
+    width:calc(100% / 3 * 2);
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.proses .title-card{
+    font-size:calc(var(--font-title-card)*.8) !important;
+}
+
+.proses .service-container{
+    background-color:var(--section-color) !important;
+}
+
+.proses img{
+    width:100% !important;
+    max-height:90% !important;
+}
+
+
+/* ---------------- responsive ------------------------- */
+@media screen and (max-width: 650px) {
+   .explanation{
+    bottom:60%;
+    left:auto;
+    width:90% !important;
+    /* background-color:yellow; */
+   }
+   
+    .service-container .card-proses{
+    width:25% !important;
+    }
+
+   .proses,.proses .proses{
+    margin:50% 0 0 0;
+    width:90% !important;
+    /* background-color:yellow; */
+   }
+
+   .service-container{
+    height:auto;
+    /* background-color:red; */
+    flex-direction:column;
+   }
+
+   .desc-con{
+    margin:2% 0;
+    /* background-color:yellow; */
+}
+}
