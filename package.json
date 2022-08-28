@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja/issues"
   },
-  "homepage": "https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja#readme"
+  "homepage": "https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
 }

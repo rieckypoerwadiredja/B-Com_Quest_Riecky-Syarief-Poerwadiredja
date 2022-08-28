@@ -1,8 +1,13 @@
 // mongoose
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/company-contact-data', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
-});
+const dotenv = require("dotenv");
+dotenv.config();
+
+// 'mongodb://127.0.0.1:27017/company-contact-data'
+mongoose.connect(process.env.DBLINK, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true
+    }).then(() => console.log('database connect'))
+    .catch((err) => console.log('database failed to connect' + err))
