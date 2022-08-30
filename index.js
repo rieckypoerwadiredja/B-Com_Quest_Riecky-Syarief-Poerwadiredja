@@ -18,95 +18,45 @@ app.use(express.urlencoded({
 require('./utils/db'); // connect to mongodb
 const Subscribe = require('./model/subscribe'); // model subscribe
 
+// subcribe function
+const {
+    postSubscribe
+} = require('./utils/subscribe');
+// data form
+const formSubscribeLayouts = require('./utils/data')
+
 
 app.get('/', (req, res) => {
     // question and data form
-    formSubscribeLayouts = {
-        title: 'Subscribe Form',
-        desc: 'Fill in required customs info',
-        action: '/',
-        method: 'POST',
-        questions: [
-
-            {
-                label: 'Company Name',
-                idClassName: 'name',
-                type: 'text',
-                placeholder: 'PT.Example',
-            },
-            {
-                label: 'Company Email',
-                idClassName: 'email',
-                type: 'email',
-                placeholder: 'example@gmail.com',
-            }
-        ]
-    };
 
     res.render('index', {
         title: 'DigitalAgency',
         layout: 'layouts/main-layout',
+        // data form from -> data.js
         formSubscribeLayouts
     });
 });
 
 app.post('/', async (req, res) => {
-    const subscribeFormData = new Subscribe({ // create new subscribe
-        name: req.body.name,
-        email: req.body.email
-    });
-
-    await subscribeFormData.save().then(() => {
-        console.log('subscribe data berhasil di simpan');
-        console.log(subscribeFormData);
-    }).catch((err) => {
-        console.log(err);
-    });
+    // function for post -> subscribe.js
+    await postSubscribe(Subscribe, req.body.name, req.body.email)
     res.redirect('/');
 });
 
 app.post('/portofolio/:name', async (req, res) => {
-    const subscribeFormData = new Subscribe({ // create new subscribe
-        name: req.body.name,
-        email: req.body.email
-    });
-
-    await subscribeFormData.save().then(() => {
-        console.log('subscribe data berhasil di simpan');
-        console.log(subscribeFormData);
-    }).catch((err) => {
-        console.log(err);
-    });
+    // function for post -> subscribe.js
+    await postSubscribe(Subscribe, req.body.name, req.body.email)
     res.redirect('/');
 });
 
 app.get('/portofolio/:name', (req, res) => {
     // question and data form
-    formSubscribeLayouts = {
-        title: 'Subscribe Form',
-        desc: 'Fill in required customs info',
-        action: '/',
-        method: 'POST',
-        questions: [
 
-            {
-                label: 'Company Name',
-                idClassName: 'name',
-                type: 'text',
-                placeholder: 'PT.Example',
-            },
-            {
-                label: 'Company Email',
-                idClassName: 'email',
-                type: 'email',
-                placeholder: 'example@gmail.com',
-            }
-        ]
-    };
     res.render('portfolio', {
         title: req.params.name,
         layout: 'layouts/detail-layout',
         name: req.params.name,
+        // data form from -> data.js
         formSubscribeLayouts
     });
 })
