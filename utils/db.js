@@ -6,7 +6,7 @@ dotenv.config();
 
 // 'mongodb://127.0.0.1:27017/DigitalAgency'
 // process.env.DBLINK
-mongoose.connect('mongodb://127.0.0.1:27017/DigitalAgency', {
+mongoose.connect(process.env.DBLINK, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true
