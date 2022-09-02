@@ -14,8 +14,8 @@
     "start": "nodemon index.js"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": "16.13.1",
+    "npm": "8.1.2"
   },
   "repository": {
     "type": "git",
