@@ -13,6 +13,10 @@
   "scripts": {
     "start": "nodemon index.js"
   },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rieckypoerwadiredja/B-Com_Quest_Riecky-Syarief-Poerwadiredja.git"
