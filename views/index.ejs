@@ -121,45 +121,13 @@
         </ion-icon>
 
         <div class="carausel-container flex">
-
-            <a href="/portofolio/product-research" class="carda card-proses flex-left-center-row">
+            <% for( let i = 0; i < portfolio.length; i++ ) { %>
+            <a href="/portofolio/<%= portfolio[i].title %>" class="carda card-proses flex-left-center-row">
                 <img src="./img/carousel/research.png" alt="">
-                <h3 class="title-card">Product Research</h3>
-                <p class="desc-card">Do the product research needed to find solution to the problem and we do it
-                    with the team.</p>
+                <h3 class="title-card"><%= portfolio[i].title %></h3>
+                <p class="desc-card"><%= portfolio[i].desc %></p>
             </a>
-            <a href="/portofolio/product-research" class="card-proses flex-left-center-row">
-                <img src="./img/carousel/data.png" alt="">
-                <h3 class="title-card">Data Collection</h3>
-                <p class="desc-card">Collect data with the team and evaluate problem and then determine what must be
-                    solved.</p>
-            </a>
-            <a href="/portofolio/product-research" class="card-proses flex-left-center-row">
-                <img src="./img/carousel/problem.png" alt="">
-                <h3 class="title-card">Problem Solving</h3>
-                <p class="desc-card">Collect data with the team and evaluate problem and then determine what must be
-                    solved.</p>
-            </a>
-            <a href="/portofolio/product-research" class="card-proses flex-left-center-row">
-                <img src="./img/carousel/research.png" alt="">
-                <h3 class="title-card">Product Research</h3>
-                <p class="desc-card">Do the product research needed to find solution to the problem and we do it
-                    with the team.</p>
-            </a>
-            <a href="/portofolio/product-research" class="card-proses flex-left-center-row">
-                <img src="./img/carousel/data.png" alt="">
-                <h3 class="title-card">Data Collection</h3>
-                <p class="desc-card">Collect data with the team and evaluate problem and then determine what must
-                    be
-                    solved.</p>
-            </a>
-            <a href="/portofolio/product-research" class="card-proses flex-left-center-row">
-                <img src="./img/carousel/problem.png" alt="">
-                <h3 class="title-card">Problem Solving</h3>
-                <p class="desc-card">Collect data with the team and evaluate problem and then determine what must
-                    be
-                    solved.</p>
-            </a>
+            <% } %>
         </div>
     </div>
 </section>

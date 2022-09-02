@@ -17,6 +17,7 @@ app.use(express.urlencoded({
 // mongodb database
 require('./utils/db'); // connect to mongodb
 const Subscribe = require('./model/subscribe'); // model subscribe
+const Portfolio = require('./model/portfolio') // model service
 
 // subcribe function
 const {
@@ -26,14 +27,17 @@ const {
 const formSubscribeLayouts = require('./utils/data')
 
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+    // Service (portfolio) data from DB
+    const portfolio = await Portfolio.find()
     // question and data form
 
     res.render('index', {
         title: 'DigitalAgency',
         layout: 'layouts/main-layout',
         // data form from -> data.js
-        formSubscribeLayouts
+        formSubscribeLayouts,
+        portfolio
     });
 });
 
@@ -49,15 +53,23 @@ app.post('/portofolio/:name', async (req, res) => {
     res.redirect('/');
 });
 
-app.get('/portofolio/:name', (req, res) => {
+app.get('/portofolio/:name', async (req, res) => {
+    const portfolio = await Portfolio.find()
+    const name = encodeURIComponent(req.params.name)
+    const selectPortfolio = await Portfolio.findOne({
+        title: req.params.name.replace('%20', ' ')
+    })
     // question and data form
-
     res.render('portfolio', {
         title: req.params.name,
         layout: 'layouts/detail-layout',
         name: req.params.name,
         // data form from -> data.js
-        formSubscribeLayouts
+        formSubscribeLayouts,
+        // all service
+        portfolio,
+        // select service
+        selectPortfolio
     });
 })
 
