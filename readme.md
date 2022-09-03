@@ -22,6 +22,7 @@ Projek ini adalah website yang dibuat untuk pemenuhan tugas Pelatihan Bahasa Pem
 * [express-ejs-layouts](https://www.npmjs.com/package/express-ejs-layouts)
 * [Nodemon](https://www.npmjs.com/package/nodemon)
 * [Mongoose (version : 5.12.13)](https://www.npmjs.com/package/mongoose)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
 <br>
 
@@ -63,13 +64,23 @@ show dbs
 db.createCollection("subscribes")
 ```
 
+* Buat collection data dalam database
+```
+db.createCollection("portfolios")
+```
+
 * Pastikan collection sudah berhasil dibuat
 ```
 show collections
 ```
 
+* pastikan semua package sudah terinstall
 
-* jalankan program dan pastikan semua package sudah terinstall
+```
+npm install
+```
+
+* jalankan program  
 
 ```
 npm start
@@ -115,6 +126,28 @@ module.exports = Subscribe;
 ```
 
 [<img align="left" src="https://api.bellshade.org/badge/navigation?badgeType=next&text=COLLECTION" />](./model/subscribe.js)
+
+<br>
+<br>
+
+```
+const mongoose = require('mongoose');
+
+const Portfolio = mongoose.model('NAMA_BARU_COLECTION', {
+    title: {
+        type: String,
+        required: true
+    },
+    desc: {
+        type: String,
+        required: true
+    }
+})
+
+module.exports = Portfolio
+```
+
+[<img align="left" src="https://api.bellshade.org/badge/navigation?badgeType=next&text=COLLECTION" />](./model/portfolio.js)
 
 
 <br>
